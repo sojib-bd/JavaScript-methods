@@ -49,13 +49,13 @@ let product = {
 
 Object.freeze(product);
 
-product.brand = "DELL";
+
+product.brand = "DELL";// modify the value
+//console.log(product.brand) // ASUS
+
 
 product.weight = '50KZ' // try to add new property
-
-console.log(product.brand) // ASUS
-
-console.log(product)  // { category: 'laptop', brand: 'ASUS', price: 50000 }
+//console.log(product)  // { category: 'laptop', brand: 'ASUS', price: 50000 }
 
 
 let product2 = {
@@ -67,9 +67,37 @@ let product2 = {
 
 Object.seal(product2);
 
-product2.brand = "Samsung";
+product2.brand = "Samsung"; // modify the value
+//console.log(product2.brand) // Samsung
+
 
 product2.color = "blue" // adding new property to the object
+//console.log(product2) //{ category: 'Mobile', brand: 'Samsung', price: 20000 }
 
-console.log(product2.brand) // Samsung
-console.log(product2) //{ category: 'Mobile', brand: 'Samsung', price: 20000 }
+
+const human = {
+    isHuman: false,
+    greeting: function () {
+        return `Hello ${this.name}. I am a human so IsHuman is ${this.isHuman}`
+    }
+}
+
+const newHuman = Object.create(human);
+
+newHuman.name = "Belal Khan",
+    newHuman.isHuman = true;
+
+//console.log(newHuman.greeting()) // Hello Belal Khan. I am a human so IsHuman is true
+
+
+
+const object = {
+
+    0: "23",
+    1: "John Snow",
+    2: true
+}
+
+//console.log(Object.entries(object)) // [ [ '0', '23' ], [ '1', 'John Snow' ], [ '2', true ] ]
+
+//console.log(Object.values(object))  // [ '23', 'John Snow', true ]
