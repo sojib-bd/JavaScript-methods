@@ -10,8 +10,16 @@ let newArr = arr.every((element, index, array) => {
 
 //console.log(newArr);
 
-var a = ['dog', 'cat']
+var a = ['dog', 'cat', 'hen']
 a[100] = 'fox'
 
-//console.log(a.length)
+//console.log(a.length) // 101
+
+let months = ['January', 'February', 'March', 'April'];
+
+months.sort();
+console.log(months)
+
+
+
 

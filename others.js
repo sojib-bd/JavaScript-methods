@@ -1,26 +1,16 @@
-// sum(10, 20);
+class PublicInstanceMethod {
 
-// diff(10, 20);
-
-// function sum(x, y) {
-//     console.log(x + y);
-// }
-
-// let diff = () => {
-//     console.log(x - y);
-// }
-
-var a = 1;
-
-function f1() {
-    console.log(a)
+    publicMethod() {
+        return " I love coding"
+    }
+    anotherPublicMethod() {
+        return "Hello developers"
+    }
 }
 
-function f2() {
-    var a = 2;
-    var b = 3;
-    f1();
-}
-f2()
+let publicInstance = new PublicInstanceMethod();
 
-console.log(b)
+let anotherPublicInstance = new PublicInstanceMethod();
+
+console.log(publicInstance.publicMethod()) // I love coding
+console.log(anotherPublicInstance.anotherPublicMethod()) // Hello developers
