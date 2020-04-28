@@ -18,7 +18,7 @@ a[100] = 'fox'
 let months = ['January', 'February', 'March', 'April'];
 
 months.sort();
-console.log(months)
+console.log(months) // [ 'April', 'February', 'January', 'March' ]
 
 
 
