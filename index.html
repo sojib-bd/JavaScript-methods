@@ -7,25 +7,18 @@
   <title>Document</title>
 </head>
 
-<body>
+<body class="intro">
 
-  <form>
-    <fieldset>
-      <legend>Fruit juice size</legend>
-      <p>
-        <input type="radio" name="size" id="size_1" value="small">
-        <label for="size_1">Small</label>
-      </p>
-      <p>
-        <input type="radio" name="size" id="size_2" value="medium">
-        <label for="size_2">Medium</label>
-      </p>
-      <p>
-        <input type="radio" name="size" id="size_3" value="large">
-        <label for="size_3">Large</label>
-      </p>
-    </fieldset>
-  </form>
+  <p>Insert Method</p>
+  <div id="destination">
+    <p>In between the Node</p>
+  </div>
+
+  <script>
+    alert(document.body.className)
+    document.body.children[0].classList.add('para')
+    alert(document.body.children[0].className)
+  </script>
 </body>
 
 </html>
