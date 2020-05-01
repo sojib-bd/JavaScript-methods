@@ -101,3 +101,25 @@ const object = {
 //console.log(Object.entries(object)) // [ [ '0', '23' ], [ '1', 'John Snow' ], [ '2', true ] ]
 
 //console.log(Object.values(object))  // [ '23', 'John Snow', true ]
+
+var item = {
+    bar: 1,
+    foo: 2,
+    baz: 3
+}
+
+item.foo = undefined;
+item.baz = null;
+delete item.bar;
+
+for (let el in item) {
+    if (item.hasOwnProperty(el)) {
+        //console.log(el, '' + item[el])
+
+
+    }
+}
+
+
+
+

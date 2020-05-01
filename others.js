@@ -1,16 +1,21 @@
-class PublicInstanceMethod {
 
-    publicMethod() {
-        return " I love coding"
+class Person {
+    constructor(name) {
+        this.name = name;
     }
-    anotherPublicMethod() {
-        return "Hello developers"
+
+    getName() {
+        return this.name
     }
 }
 
-let publicInstance = new PublicInstanceMethod();
+class AnotherPersonConstructor extends Person {
+    constructor(name) {
+        super(name)
+    }
+}
 
-let anotherPublicInstance = new PublicInstanceMethod();
+let person = new AnotherPersonConstructor('Mikel');
 
-console.log(publicInstance.publicMethod()) // I love coding
-console.log(anotherPublicInstance.anotherPublicMethod()) // Hello developers
+console.log(person.getName())
+
